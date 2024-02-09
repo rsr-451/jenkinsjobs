@@ -1,2 +1,3 @@
-sudo openssl req -new -newkey rsa:2048 -nodes -out /home/raja/Documents/jenkins_com.csr -keyout /home/raja/Documents/jenkins_com.key -subj "/C=IN/ST=/L=/O=/CN=rajareddy.com"
+sudo rm -f /home/raja/Documents/jenkins_com.*
+sudo openssl req -new -newkey rsa:2048 -nodes -out /home/raja/Documents/jenkins_com.csr -keyout /home/raja/Documents/jenkins_com.key -subj "/C=IN/ST=/L=/O=/CN=anki.com"
 sudo openssl req -in /home/raja/Documents/jenkins_com.csr -noout -text
