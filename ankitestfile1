@@ -1,17 +1,16 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Checkip') {
+        stages {
+        stage('checkip') {
             steps {
                 sh '''ifconfig'''
             }}
-         stage('Check dnsname') {
+         stage('check dnsname') {
             steps {
                 sh '''nslookup fedex.com"'''
             }   
         }
-         stage('Check cpu info') {
+         stage('check cpu info') {
             steps {
                 sh '''lscpu'''
             }   
