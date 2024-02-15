@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkip') {
+            steps {
+                sh '''ifconfig'''
+            }}
+         stage('Check dnsname') {
+            steps {
+                sh '''nslookup fedex.com"'''
+            }   
+        }
+         stage('Check cpu info') {
+            steps {
+                sh '''lscpu'''
+            }   
+        }
+    }
+}
