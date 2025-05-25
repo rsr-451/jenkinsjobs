@@ -7,7 +7,7 @@ pipeline {
             }}
          stage('check dnsname') {
             steps {
-                sh '''nslookup fedex.com"'''
+                sh '''nslookup google.com"'''
             }   
         }
          stage('check cpu info') {
